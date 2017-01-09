@@ -8,6 +8,8 @@ public class ShutDownHook {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
+		//addShutdownHook
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 			System.out.println("do resource clean");
 		}));
