@@ -47,8 +47,9 @@ public class ExportExcel{
 			
 	/*
 	 * 导出数据
+	 * @ parm path String default D:\\export.xls
 	 * */
-	public void export() throws Exception{
+	public void export(String path) throws Exception{
 		try{
 			HSSFWorkbook workbook = new HSSFWorkbook();						// 创建工作簿对象
 			HSSFSheet sheet = workbook.createSheet(title);		 			// 创建工作表
@@ -131,7 +132,7 @@ public class ExportExcel{
 			    {
 			        String fileName = "Excel-" + String.valueOf(System.currentTimeMillis()).substring(4, 13) + ".xls";
 			        String headStr = "attachment; filename=\"" + fileName + "\"";
-			        FileOutputStream fo=new FileOutputStream("D:\\export.xls");
+			        FileOutputStream fo=new FileOutputStream(path==null?"D:\\export.xls":path);
 //			        response = getResponse();
 //			        response.setContentType("APPLICATION/OCTET-STREAM");
 //			        response.setHeader("Content-Disposition", headStr);

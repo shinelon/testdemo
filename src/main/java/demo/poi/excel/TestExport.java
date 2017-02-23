@@ -26,7 +26,7 @@ public class TestExport {
 		dataList.add(objs);
 	}
 	ExportExcel ex = new ExportExcel(title, rowsName, dataList);
-	ex.export();
+	ex.export("D:\\export2.xls");
 	}
 
 }
