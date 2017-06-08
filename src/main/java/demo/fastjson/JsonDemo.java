@@ -27,8 +27,7 @@ import com.alibaba.fastjson.JSONObject;
  */
 public class JsonDemo {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) {		
 		json2JsonObjectM1();// 将Json文本数据信息转换为JsonObject对象，然后利用键值对的方式获取信息
 		json2BeanM2();// 将Json文本数据转换为JavaBean数据！
 		json2JSONArrayM3();// 将json数据转化为JSONArray:

@@ -34,7 +34,6 @@ public class JDBC {
 		return connection;
 	}
 	
-	// ����Oracle�����Ƿ�ɹ�
 	public static void main(String[] args) {
 		select();
 	}
@@ -45,12 +44,9 @@ public class JDBC {
 		System.out.println("���ӣ�"+connection);
 		try{
 			st = connection.createStatement(); 
-			//ִ��SQL 
 			String sql = "select * from ac01 where ROWNUM<=1"; 
 			rs = st.executeQuery(sql); 
-			//������ 
 			while(rs.next()){ 
-				//ÿ��ѭ������ȡ��һ����¼ 
 				String name = rs.getString("AAC001"); 
 				Date birthday = rs.getDate("AAC007"); 
 				System.out.println(name); ; 
@@ -60,14 +56,13 @@ public class JDBC {
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}finally{
-			//�ͷ���Դ
 			if(rs != null){
 				try {
 					rs.close();
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}finally{
-					rs = null;//--> ����Ѹ�ٳ�Ϊjava gc�Ķ���
+					rs = null; 
 				}
 			}
 			if(st != null){
@@ -76,7 +71,7 @@ public class JDBC {
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}finally{
-					st = null;//--> ����Ѹ�ٳ�Ϊjava gc�Ķ���
+					st = null; 
 				}
 			}
 			if(connection != null){
@@ -85,7 +80,7 @@ public class JDBC {
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}finally{
-					connection = null;//--> ����Ѹ�ٳ�Ϊjava gc�Ķ���
+					connection = null; 
 				}
 			}
 		}

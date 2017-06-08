@@ -6,9 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*
- * ʹ�ù��������򻯴���
- */
 public class JDBCUtils {
 	//private static String driver = "com.mysql.jdbc.Driver";
 	private static String driver ="oracle.jdbc.driver.OracleDriver";
@@ -17,7 +14,6 @@ public class JDBCUtils {
 	private static String user = "lfyb";
 	private static String password = "lfyb";
 	
-	//ͨ����̬��ע������
 	static{
 		try {
 			Class.forName(driver);
@@ -27,7 +23,6 @@ public class JDBCUtils {
 	}
 	
 	
-	//��ȡ����
 	public static Connection getConnection(){
 		try {
 			return DriverManager.getConnection(url, user, password);
@@ -37,7 +32,6 @@ public class JDBCUtils {
 		return null;
 	}
 	
-	//�ͷ���Դ
 	public static void release(Connection conn,Statement st,ResultSet rs){
 		if(rs != null){
 			try {

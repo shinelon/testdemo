@@ -75,7 +75,7 @@ public class CreateParseCode {
 			// ((DataBufferByte) srcImage.getData().getDataBuffer()).getData();
 
 			 MatrixToImageWriter.writeToByteStream(bitMatrix, "png", bao);
-			 System.out.println(bao.toByteArray());
+//			 System.out.println(bao.toByteArray());
 			 String ok = Base64Code(bao.toByteArray());
 			 BASE64Decod(ok);
 

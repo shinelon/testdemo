@@ -20,10 +20,8 @@ import java.util.regex.Pattern;
 
 public class test1 {
 	public static void main(String[] args) {
-		List<String> list=new ArrayList<>();
-		list.add(null);
-		System.out.println(list.size());
-		
+		"123".equals(null);
+		System.out.println(123);
 //		char msg[]={73,76,79,86,69,89,79,85};
 //		System.out.println(msg);
 	}

@@ -323,7 +323,6 @@ public class TestLangDemo {
         }
 
         System.out.println(strArray.length);
-        System.out.println(strArray.toString());
 
         System.out.println("判断是否是某类字符.");
         System.out.println(StringUtils.isAlpha("ab"));
@@ -361,7 +360,7 @@ public class TestLangDemo {
     private void validateDemo() {
         String[] strarray = { "a", "b", "c" };
         System.out.println("验证功能");
-        System.out.println(Validate.notEmpty(strarray));
+//        System.out.println(Validate.notEmpty(strarray));
     }
 
     private void wordUtilsDemo() {

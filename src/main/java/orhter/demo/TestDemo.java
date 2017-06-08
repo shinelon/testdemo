@@ -25,7 +25,7 @@ public class TestDemo {
 		String path="D:/file";
 		File folder = new File(path);
 		File[] listOfFiles = folder.listFiles();
-		System.out.println(listOfFiles.toString());
+		System.out.println(Arrays.toString(listOfFiles));
 	}
 	public static void integerValue(){
 		System.out.println(Integer.valueOf(""));

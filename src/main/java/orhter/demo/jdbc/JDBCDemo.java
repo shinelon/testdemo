@@ -18,12 +18,11 @@ public class JDBCDemo {
 			Connection conn = DriverManager.getConnection(url, user, password);
 			
 			String sql="Select id as sid,name as sname from student";
+			String updateSql="update student set name='张三' where id=1 ";
 			PreparedStatement pst=conn.prepareStatement(sql);
-			
 			ResultSet rs=pst.executeQuery();
 			ResultSetMetaData rsmd = null;
 			while(rs.next()){
-				//ÿ��ѭ������ȡ��һ����¼
 			    rsmd=rs.getMetaData();
 			    System.out.println(rsmd.getColumnLabel(2));
 //				int id = rs.getInt("sid");
