@@ -16,9 +16,9 @@ public class Test {
 		bean.setId("DJAPP");
 		//HEAD
 		RegisterAppHeadBean beanHead =new RegisterAppHeadBean();
-		beanHead.setAppname("应用名称");		
-		beanHead.setDevkey("开发号");		
-		beanHead.setQy_name("企业名称");
+		beanHead.setAppname("乐富测试应用1");		
+		beanHead.setDevkey("aad94c72-be2c-4e24-a39b-c837cdf486c8");		
+		beanHead.setQy_name("乐富测试1");
 		List<RequestHead> headList=new ArrayList<>();
 		headList.add(beanHead);
 		bean.setRequestHead(headList);
